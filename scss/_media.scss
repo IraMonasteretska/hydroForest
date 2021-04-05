@@ -138,6 +138,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .footer {
     &__reserved {
       margin-top: 55px;
@@ -153,6 +154,24 @@
 
     &__email-wrap {
       max-width: 320px;
+    }
+  }
+
+  .nav {
+    &__list {
+      margin: 20px 0 0 0;
+    }
+  
+    &__title {
+      font-size: 17px;
+    }
+  
+    &__items {
+      margin: 10px 0 0 0;
+    }
+  
+    &__bunner {
+      margin-left:10px;
     }
   }
 }
@@ -388,9 +407,28 @@
       margin-right: 7px;
     }
   }
+  .nav {
+    &__main {
+display: block;
+      width: 100%;
+      height: auto !important;
+    }
+  
+    &__list {
+      width: 100%;
+      margin: 40px 0 0 0;
+    }
+  
+  }
 }
 
 @media (max-width: 991px) {
+  .nav {
+    &.visible {
+      transform: translateX(-100%);
+    }
+  }
+
   .gray--bg-main-first {
     padding-top: 160px;
   }
@@ -438,7 +476,7 @@
       margin-left: auto;
       margin-right: auto;
       img {
-        max-width: 145px;
+        max-width: 130px;
         width: 100%;
       }
     }
@@ -543,7 +581,7 @@
 
       &__menu-item {
         margin: 0;
-        margin-top: 25px;
+        margin-top: 35px;
         text-align: center;
         font-size: 14px;
         &:first-child{
@@ -566,7 +604,7 @@
       &__leng-cont {
         display: flex;
         max-width: 250px;
-        margin: 40px auto 0 auto;
+        margin: 60px auto 0 auto;
       }
 
       &__leng-flag {
@@ -582,7 +620,7 @@
 
       &__search-cont {
         display: block;
-        margin: 35px auto 0 auto;
+        margin: 65px auto 0 auto;
       }
 
       &__search-input {
@@ -704,7 +742,6 @@
 
     &__cards {
       margin-top: 45px;
-      max-width: 500px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -760,6 +797,35 @@
 }
 
 @media (max-width: 766px) {
+
+
+  .mobile-menu {
+    .header {
+      &__menu-item {
+        margin-top: 25px;
+      }
+
+      &__leng-cont {
+        margin: 40px auto 0 auto;
+      }
+
+      &__search-cont {
+        margin: 35px auto 0 auto;
+      }
+    }
+  }
+
+
+  .nav-title {
+    &__line {
+      width: 59px;
+    }
+  }
+
+  .tabs-sliders__slider {
+      margin-top: 45px;
+  }
+
   .home-blog__white-bg {
     height: 550px;
 }
@@ -897,10 +963,10 @@
   .our-brand {
     margin-bottom: 30px;
     &__brand-wrap {
-      margin-top: -20px;
-      width: calc(33.3% - 20px);
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-top: -10px;
+      width: calc(33.3% - 26px);
+      margin-left: 13px;
+      margin-right: 13px;
     }
   }
 
@@ -1031,12 +1097,21 @@
     &__link {
       text-align: center;
       display: block;
-      margin-top: 12px;
+      margin-top: 20px;
     }
   }
 }
 
 @media (max-width: 500px) {
+
+  .home-category__link-card-mobile{
+    display: block;
+  }
+
+  .home-category__link-card-desktope{
+    display: none;
+  }
+
   .home-category {
     &__title-card {
       font-size: 16px;
@@ -1054,9 +1129,9 @@
       margin-left: 0;
       text-align: center;
       &:before {
-        right: 0px;
+        right: -15px;
         width: 7px;
-        height: 15px;
+        height: 13px;
       }
     }
   }
@@ -1068,6 +1143,16 @@
 
     &__img {
       height: 180px;
+    }
+  }
+
+  .partner {
+ flex-wrap: wrap;
+  }
+  .partner__item{
+    width: calc(50% - 22px);
+    &:nth-child(2){
+      border: none;
     }
   }
 }

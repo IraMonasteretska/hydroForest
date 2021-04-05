@@ -8,7 +8,7 @@ let mobileMenu = document.querySelector(".mobile-menu");
 // end common variables
 
 // start height nav
-navHeight.style.height = navHeight.scrollHeight / 2 + "px";
+navHeight.style.height = navHeight.scrollHeight / 2 + 200 + "px";
 // end height nav
 
 // start hide header

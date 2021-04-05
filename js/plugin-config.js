@@ -4,11 +4,15 @@ if (document.querySelector(".slider-bunner")) {
   $(".slider-bunner__left-slider").slick({
     arrows: false,
     dots: true,
+    autoplay: true,
+  autoplaySpeed: 2500,
   });
 
   $(".slider-bunner__right-slider").slick({
     arrows: false,
     dots: true,
+    autoplay: true,
+  autoplaySpeed: 2500,
   });
 }
 // end bunners sliders
@@ -17,6 +21,8 @@ if (document.querySelector(".slider-bunner")) {
 if (document.querySelector(".welcome__slider")) {
   $(".welcome__slider").slick({
     dots: false,
+    autoplay: true,
+  autoplaySpeed: 2500,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>',
   });
