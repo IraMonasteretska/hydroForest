@@ -1,0 +1,64 @@
+// height media
+a,
+button {
+  outline: none;
+}
+* {
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #222222;
+}
+.st-title {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 58px;
+}
+
+.st-bold {
+  font-weight: bold;
+}
+
+.st-letter {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 72px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1520px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.gray--bg {
+  padding-top: 25px;
+  background: rgba(177, 189, 201, 0.2);
+  padding-bottom: 25px;
+}
+.gray--bg-main-first {
+  padding-top: 215px;
+}
+
+.gray--bg-main-two {
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+.gray--bg-main-three {
+  padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-black-home{
+  background: #222;
+  padding-bottom: 110px;
+}
+
+.header__burger-cont, .mobile-menu{
+  display: none;
+}
