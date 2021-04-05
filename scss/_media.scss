@@ -631,6 +631,15 @@ display: block;
 }
 
 @media (max-width: 901px) {
+
+  .slider-bunner__desck{
+    display: none !important;
+  }
+  
+  .slider-bunner__mobile{
+    display: block !important; 
+  }
+
   .card-product {
     padding: 15px;
 
@@ -687,7 +696,6 @@ display: block;
     }
 
     &__right {
-      max-width: 500px;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -816,6 +824,7 @@ display: block;
 @media (max-width: 766px) {
 
 
+
   .mobile-menu {
     .header {
       &__menu-item {
@@ -870,11 +879,6 @@ display: block;
     padding-right: 10px;
   }
 
-  .slider-bunner {
-    &__right {
-      width: 70%;
-    }
-  }
 
   .welcome {
     &__text-df {

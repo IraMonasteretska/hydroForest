@@ -59,6 +59,10 @@ button {
   padding-bottom: 110px;
 }
 
-.header__burger-cont, .mobile-menu{
+.header__burger-cont, .mobile-menu, .slider-bunner__mobile{
   display: none;
+}
+
+.slider-bunner__mobile{
+display: none !important;
 }
