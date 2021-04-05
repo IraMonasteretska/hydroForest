@@ -707,9 +707,16 @@ display: block;
       margin-top: 20px;
     }
 
+    &__slider-count{
+      background: #fff;
+    }
     &__df {
       margin-top: 20px;
       display: block;
+    }
+
+    &__slider-current-slide{
+      color: #222;
     }
 
     &__left {
@@ -726,14 +733,23 @@ display: block;
 
     &__right-link {
       margin-left: 0;
+      margin-top: 20px;
+      border: 1px solid #222;
+      color: #222
+    }
+    .slick-arrow {
+      &:hover{
+        background: url(../img/icons/slider-arrow-hover-black.svg);
+      }
     }
   }
 
   .welcome-black-bg {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     &:before {
       height: 160px;
       bottom: -60px;
+      background: transparent;
     }
   }
 
@@ -741,6 +757,7 @@ display: block;
     margin-top: 40px;
 
     &__cards {
+      max-width: 500px;
       margin-top: 45px;
       margin-left: auto;
       margin-right: auto;
@@ -1103,6 +1120,13 @@ display: block;
 }
 
 @media (max-width: 500px) {
+
+
+  .partner {
+  img{
+    width: 85%;
+    }
+  }
 
   .home-category__link-card-mobile{
     display: block;
