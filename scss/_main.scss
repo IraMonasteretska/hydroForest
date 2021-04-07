@@ -15,6 +15,11 @@ button {
   font-size: 40px;
   line-height: 58px;
 }
+.st-subtitle {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
 
 .st-bold {
   font-weight: bold;
@@ -65,4 +70,21 @@ button {
 
 .slider-bunner__mobile{
 display: none !important;
+}
+
+.accordion {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 5.5s;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.products__filter-icon-open, .products__filter-icon-close{
+  display: none;
 }
