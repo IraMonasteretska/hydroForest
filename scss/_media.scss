@@ -610,6 +610,87 @@
       margin-right: 20px;
     }
   }
+
+  .single-top-white-bg {
+    padding-bottom: 50px;
+    &:before {
+      height: 150px;
+    }
+  }
+  .single-top {
+    &__date {
+      margin-top: 55px;
+    }
+
+    &__df {
+      margin-top: 30px;
+    }
+
+    &__left {
+      margin-left: 30px;
+      width: calc(50% - 40px);
+    }
+
+    &__right {
+      width: calc(50% - 10px);
+    }
+
+    &__ing-cont {
+      margin-top: 40px;
+      max-width: 486px;
+    }
+
+    &__img {
+      max-height: 350px;
+    }
+  }
+
+  .single-bot-black-bg {
+    padding-bottom: 100px;
+    &:before {
+      height: 170px;
+    }
+  }
+
+  .single-bot {
+    padding-top: 0px;
+
+    &__df {
+      margin-top: 35px;
+    }
+
+    &__left {
+      width: calc(50% - 10px);
+    }
+
+    &__fl {
+      margin-left: 30px;
+      width: calc(100% - 30px);
+    }
+
+    &__list {
+      &:before {
+        top: 14px;
+      }
+    }
+
+    &__list-left {
+      margin-left: 100px;
+    }
+    &__list-right {
+      margin-left: 40px;
+    }
+
+    &__right {
+      width: calc(50% - 10px);
+    }
+
+    &__slider-cont {
+      margin-top: 30px;
+      max-width: 486px;
+      max-height: 350px;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -1391,9 +1472,11 @@
       height: 190px;
     }
   }
+
   .products__sort-icon {
     display: flex;
   }
+
   .category-bunner-title--index {
     font-size: 16px;
     transform: translateY(-10px);
@@ -1506,6 +1589,76 @@
     }
     .slick-prev {
       right: 95px;
+    }
+  }
+
+  .breadcrumbs__single {
+    margin-top: 165px;
+  }
+
+  .single-top-white-bg {
+    padding-bottom: 50px;
+    &:before {
+      height: 150px;
+    }
+  }
+
+  .single-top {
+    &__date {
+      margin-top: 45px;
+      margin-bottom: 20px;
+    }
+
+    &__df {
+      margin-top: 20px;
+      display: block;
+    }
+
+    &__left {
+      margin-left: 0px;
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    &__ing-cont {
+      margin-top: 30px;
+    }
+  }
+
+  .single-bot-black-bg {
+    padding-bottom: 100px;
+    &:before {
+      height: 170px;
+    }
+  }
+
+  .single-bot {
+    &__df {
+      margin-top: 15px;
+      display: block;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__fl {
+      margin-left: 0px;
+      width: 100%;
+    }
+
+    &__list-left {
+      margin-left: 37px;
+    }
+    &__list-right {
+      margin-left: 37px;
+    }
+
+    &__right {
+      width: 100%;
     }
   }
 }

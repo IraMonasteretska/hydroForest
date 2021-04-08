@@ -5,14 +5,14 @@ if (document.querySelector(".slider-bunner")) {
     arrows: false,
     dots: true,
     autoplay: true,
-  autoplaySpeed: 5500,
+    autoplaySpeed: 5500,
   });
 
   $(".slider-bunner__right-slider").slick({
     arrows: false,
     dots: true,
     autoplay: true,
-  autoplaySpeed: 5500,
+    autoplaySpeed: 5500,
   });
 }
 // end bunners sliders
@@ -22,7 +22,7 @@ if (document.querySelector(".welcome__slider-js")) {
   $(".welcome__slider").slick({
     dots: false,
     autoplay: true,
-  autoplaySpeed: 5500,
+    autoplaySpeed: 5500,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>',
   });
@@ -61,7 +61,7 @@ if (document.querySelector(".about__first-slider")) {
   $(".about__first-slider").slick({
     dots: false,
     autoplay: true,
-  autoplaySpeed: 5500,
+    autoplaySpeed: 5500,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>',
   });
@@ -100,7 +100,7 @@ if (document.querySelector(".about__two-slider")) {
   $(".about__two-slider").slick({
     dots: false,
     autoplay: true,
-  autoplaySpeed: 5500,
+    autoplaySpeed: 5500,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>',
   });
@@ -206,9 +206,9 @@ if (document.querySelector(".home-blog__slider")) {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
-        }
+        },
       },
-    ]
+    ],
   });
 
   let currentSlide;
@@ -254,8 +254,8 @@ if (document.querySelector(".video-home")) {
     })
     .on("beforeChange", () => {
       for (let i = 0; i < itemFor.length; i++) {
-        if (itemFor[i].classList.contains('slick-active')) {
-          itemFor[i].querySelector('.video-home__for-video').pause()
+        if (itemFor[i].classList.contains("slick-active")) {
+          itemFor[i].querySelector(".video-home__for-video").pause();
         }
       }
     });
@@ -273,9 +273,9 @@ if (document.querySelector(".video-home")) {
         settings: {
           slidesToShow: 2,
           vertical: false,
-        }
+        },
       },
-    ]
+    ],
   });
 
   let currentSlide;
@@ -306,3 +306,15 @@ if (document.querySelector(".video-home")) {
   );
 }
 // end video blog slider
+
+// start single page slider
+if (document.querySelector(".single-bot__slider")) {
+  $(".single-bot__slider").slick({
+    dots: false,
+    autoplay: true,
+    // autoplaySpeed: 5500,
+    prevArrow: '<div class="slick-prev slick-arrow">PREV</div>',
+    nextArrow: '<div class="slick-next slick-arrow">NEXT</div>',
+  });
+}
+// end single page slider
