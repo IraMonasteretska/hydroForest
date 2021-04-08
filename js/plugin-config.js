@@ -18,7 +18,7 @@ if (document.querySelector(".slider-bunner")) {
 // end bunners sliders
 
 // start welcome slider
-if (document.querySelector(".welcome__slider")) {
+if (document.querySelector(".welcome__slider-js")) {
   $(".welcome__slider").slick({
     dots: false,
     autoplay: true,
@@ -55,6 +55,84 @@ if (document.querySelector(".welcome__slider")) {
   );
 }
 // end welcome slider
+
+// start about first slider
+if (document.querySelector(".about__first-slider")) {
+  $(".about__first-slider").slick({
+    dots: false,
+    autoplay: true,
+  autoplaySpeed: 5500,
+    prevArrow: '<div class="slick-prev slick-arrow"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"></div>',
+  });
+
+  let currentSlide;
+  const updateSliderCounter = function (slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    $(".about__first-slider-current-slide").text(currentSlide);
+  };
+
+  $(".about__first-slider").on("init", function (event, slick) {
+    updateSliderCounter(slick);
+  });
+  let countClonedSlide = 0;
+  let CountSlide = document.querySelectorAll(".about__first-slider-item");
+  for (let i of CountSlide) {
+    if (i.classList.contains("slick-cloned")) {
+      countClonedSlide++;
+    }
+  }
+
+  let allCountSlide = CountSlide.length - countClonedSlide;
+  $(".about__first-slider-all-slide").text(allCountSlide);
+
+  $(".about__first-slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    }
+  );
+}
+// end about first slider
+
+// start about two slider
+if (document.querySelector(".about__two-slider")) {
+  $(".about__two-slider").slick({
+    dots: false,
+    autoplay: true,
+  autoplaySpeed: 5500,
+    prevArrow: '<div class="slick-prev slick-arrow"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"></div>',
+  });
+
+  let currentSlide;
+  const updateSliderCounter = function (slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    $(".about__two-slider-current-slide").text(currentSlide);
+  };
+
+  $(".about__two-slider").on("init", function (event, slick) {
+    updateSliderCounter(slick);
+  });
+  let countClonedSlide = 0;
+  let CountSlide = document.querySelectorAll(".about__two-slider-item");
+  for (let i of CountSlide) {
+    if (i.classList.contains("slick-cloned")) {
+      countClonedSlide++;
+    }
+  }
+
+  let allCountSlide = CountSlide.length - countClonedSlide;
+  $(".about__two-slider-all-slide").text(allCountSlide);
+
+  $(".about__two-slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    }
+  );
+}
+// end about two slider
 
 // start tabs slider
 if (document.querySelector(".tabs-sliders")) {
@@ -227,5 +305,4 @@ if (document.querySelector(".video-home")) {
     }
   );
 }
-
 // end video blog slider

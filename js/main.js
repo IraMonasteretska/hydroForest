@@ -174,3 +174,20 @@ if (document.querySelector(".products__filter")) {
   });
 }
 // end filter product hide/visible
+
+// start sort hide/visible
+if (document.querySelector(".cat-prod__sort")) {
+  let filterClose = document.querySelector(".products__sort-icon-close");
+  let filterOpen = document.querySelector(".products__sort-icon-open");
+  let filterMain = document.querySelector(".cat-prod__sort");
+  let htmlTag = document.querySelector("html");
+  filterClose.addEventListener("click", () => {
+    filterMain.classList.toggle("active");
+    htmlTag.style.overflowY = "hidden";
+  });
+  filterOpen.addEventListener("click", () => {
+    filterMain.classList.toggle("active");
+    htmlTag.style.overflowY = "visible";
+  });
+}
+// end sort hide/visible

@@ -334,8 +334,8 @@
         </div>
       </div>
     </section>
-    <div class="container">
-    <div class="products__filter-icon products__filter-icon-close active ">
+    <div class="products__filter-df-sort  container">
+    <div class="products__filter-icon products__filter-icon-close">
       <svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line y1="2.85718" x2="32.0002" y2="2.85718" stroke="white" stroke-width="2" />
         <line y1="12.762" x2="32.0002" y2="12.762" stroke="white" stroke-width="2" />
@@ -344,6 +344,10 @@
         <rect x="3.80957" y="19.8572" width="6.09528" height="6.09528" rx="3.04764" fill="white" />
         <rect x="21.3335" y="9.95264" width="6.09528" height="6.09528" rx="3.04764" fill="white" />
       </svg>
+    </div>
+
+    <div class="products__sort-icon products__sort-icon-close">
+    <img src="img/icons/sort.svg" alt="">
     </div>
   </div>
     <section class="cat-prod container">
@@ -640,7 +644,13 @@
         </div>
       </div>
       <div class="cat-prod__main">
-        <div class="cat-prod__sort">
+        <div class="cat-prod__sort ">
+          <div class="products__sort-icon products__sort-icon-open">
+            <svg width="14" height="28" viewBox="0 0 14 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.375 14L0 25.375V28L14 14L0 0V2.62498L11.375 14Z" fill="#E44747"/>
+              </svg>
+              
+            </div>
           <p class="cat-prod__srt-by">Sorting by:</p>
           <ul class="cat-prod__sorting">
             <li class="cat-prod__sort-item active">popularity</li>
@@ -954,6 +964,28 @@
         <h3 class="cat-prod__more-ajax-title">Show more products</h3>
           </div>
          
+        </div>
+        <div class="cat-prod__pagination">
+          <ul>
+            <li class="cat-prod_arrow-prev cat-prod_arrow">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.87499 8L1 12.875V14L7 8L1 2V3.12499L5.87499 8Z" fill="#E44747" stroke="#E44747"/>
+              </svg>
+              </li>
+            <li class="">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>...</li>
+            <li>18</li>
+            <li class="cat-prod_arrow cat-prod_arrow-next">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.87499 8L1 12.875V14L7 8L1 2V3.12499L5.87499 8Z" fill="#E44747" stroke="#E44747"/>
+              </svg>
+              </li>
+       
+          </ul>
         </div>
       </div>
     </section>
