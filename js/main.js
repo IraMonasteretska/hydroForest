@@ -20,15 +20,17 @@ window.addEventListener("scroll", () => {
     header.classList.add("active");
     nav.classList.add("active");
     mobileMenu.classList.add("active");
-    if(document.querySelector('.products__filter')){
-      document.querySelector('.products__filter').classList.add("long-header");
+    if (document.querySelector(".products__filter")) {
+      document.querySelector(".products__filter").classList.add("long-header");
     }
   } else if (scrolled < 60) {
     header.classList.remove("active");
     nav.classList.remove("active");
     mobileMenu.classList.remove("active");
-    if(document.querySelector('.products__filter')){
-      document.querySelector('.products__filter').classList.remove("long-header");
+    if (document.querySelector(".products__filter")) {
+      document
+        .querySelector(".products__filter")
+        .classList.remove("long-header");
     }
   }
   scrollPrev = scrolled;
@@ -157,18 +159,18 @@ if (document.querySelector(".accordion")) {
 // end accordion
 
 // start filter product hide/visible
-if(document.querySelector('.products ')){
-let filterClose = document.querySelector('.products__filter-icon-close')
-let filterOpen = document.querySelector('.products__filter-icon-open')
-let filterMain = document.querySelector('.products__filter')
-let htmlTag = document.querySelector('html')
-filterClose.addEventListener('click', () => {
-  filterMain.classList.toggle('active')
-  htmlTag.style.overflowY = 'hidden'
-})
-filterOpen.addEventListener('click', () => {
-  filterMain.classList.toggle('active')
-  htmlTag.style.overflowY = 'visible'
-})
+if (document.querySelector(".products__filter")) {
+  let filterClose = document.querySelector(".products__filter-icon-close");
+  let filterOpen = document.querySelector(".products__filter-icon-open");
+  let filterMain = document.querySelector(".products__filter");
+  let htmlTag = document.querySelector("html");
+  filterClose.addEventListener("click", () => {
+    filterMain.classList.toggle("active");
+    htmlTag.style.overflowY = "hidden";
+  });
+  filterOpen.addEventListener("click", () => {
+    filterMain.classList.toggle("active");
+    htmlTag.style.overflowY = "visible";
+  });
 }
 // end filter product hide/visible

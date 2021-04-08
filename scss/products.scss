@@ -1,6 +1,14 @@
 .breadcrumbs {
   display: flex;
   align-items: center;
+  &__cat {
+    font-size: 16px;
+    color: #222222;
+    transition: all 0.5s;
+    &:hover {
+      color: #e44747;
+    }
+  }
   &__home {
     svg path {
       transition: all 0.5s;
@@ -42,6 +50,8 @@
     border-radius: 2px;
     padding: 30px;
     overflow: auto;
+  }
+  &__filter-prod{
     height: 1230px;
   }
 
@@ -136,7 +146,8 @@
     &:hover .products__cards-title:before {
       background: #fff;
     }
-    &:nth-child(7), &:nth-child(8){
+    &:nth-child(7),
+    &:nth-child(8) {
       margin-bottom: 0;
     }
   }
@@ -201,9 +212,8 @@
     margin-bottom: 30px;
   }
 
-  &__filter-df{
-display: flex;
-justify-content: space-between;
+  &__filter-df {
+    display: flex;
+    justify-content: space-between;
   }
 }
-

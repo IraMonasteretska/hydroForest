@@ -3,6 +3,7 @@ a,
 button {
   outline: none;
 }
+
 * {
   font-family: Noto Sans JP;
   font-style: normal;
@@ -39,7 +40,6 @@ button {
   padding-right: 20px;
 }
 
-
 .gray--bg {
   padding-top: 25px;
   background: rgba(177, 189, 201, 0.2);
@@ -59,17 +59,19 @@ button {
   position: relative;
 }
 
-.bg-black-home{
+.bg-black-home {
   background: #222;
   padding-bottom: 110px;
 }
 
-.header__burger-cont, .mobile-menu, .slider-bunner__mobile{
+.header__burger-cont,
+.mobile-menu,
+.slider-bunner__mobile {
   display: none;
 }
 
-.slider-bunner__mobile{
-display: none !important;
+.slider-bunner__mobile {
+  display: none !important;
 }
 
 .accordion {
@@ -85,6 +87,87 @@ display: none !important;
   transition: max-height 0.2s ease-out;
 }
 
-.products__filter-icon-open, .products__filter-icon-close{
+.products__filter-icon-open,
+.products__filter-icon-close {
   display: none;
+}
+
+// custom checkbox
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.checkbox-container input, .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #b1bdc9;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.1s;
+}
+.radio-container .checkmark {
+  border-radius: 100%;
+}
+
+.checkbox-container:hover input ~ .checkmark, .radio-container:hover input ~ .checkmark {
+  border: 1px solid #e44747;
+}
+
+.checkbox-container input:checked ~ .checkmark, .radio-container input:checked ~ .checkmark{
+  border: 4px solid #e44747;
+  box-sizing: border-box;
+}
+
+
+
+.products__accordion-panel-type, .products__filter, html, .nav{
+  /* width */
+&::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  background: #EFF2F4;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #B1BDC9;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 }

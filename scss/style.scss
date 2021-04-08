@@ -1,6 +1,8 @@
 @import "normalize";
 @import "main";
 @import "products";
+@import "category";
+@import "range";
 
 .home-category__link-card-mobile{
   display: none;
@@ -572,7 +574,11 @@ img{
     display: block;
     height: 100px;
     margin-bottom: -8px;
+    transition: all .3s;
     overflow: hidden;
+    &:hover{
+color: #e44747;;
+    }
   }
 
   &__prices {
