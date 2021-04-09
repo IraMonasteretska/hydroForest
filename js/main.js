@@ -96,7 +96,7 @@ if (document.querySelector(".fl-text")) {
 // end first letter text js
 
 // start tabs functions
-if (document.querySelector(".tabs-sliders")) {
+if (document.querySelector(".tabs-sliders-index")) {
   let tabsItemBtn = document.querySelectorAll(".tabs-sliders__tabs-item");
   let tabsItem = document.querySelectorAll(".tabs-sliders__tab");
   let tabsISlider = document.querySelector(".tabs-sliders");
