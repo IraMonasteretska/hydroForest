@@ -1,5 +1,4 @@
 // start bunners sliders
-
 if (document.querySelector(".slider-bunner")) {
   $(".slider-bunner__left-slider").slick({
     arrows: false,
@@ -318,3 +317,38 @@ if (document.querySelector(".single-bot__slider")) {
   });
 }
 // end single page slider
+
+// start single-product slider
+if (document.querySelector(".product-top__for")) {
+  let video = document.querySelectorAll(".product-top__for-video");
+  $(".product-top__for")
+    .slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      asNavFor: ".product-top__nav",
+    })
+    .on("beforeChange", () => {
+      for (let i = 0; i < video.length; i++) {
+        video[i].pause();
+      }
+    });
+  $(".product-top__nav").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: ".product-top__for",
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 766,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ]
+  });
+}
+// end single-product slider

@@ -2,20 +2,22 @@
   margin-top: 215px;
 }
 
-.home-blog-single-wrap{
+.home-blog-single-wrap {
   overflow: hidden;
   height: auto;
   margin-bottom: 60px;
 }
 
-.home-blog-single{
-&:before, &:after{
-background: #fff !important;
+.home-blog-single {
+  &:before,
+  &:after {
+    background: #fff !important;
+  }
+  &:after {
+    height: 100px !important;
+  }
 }
-&:after{
-height: 100px !important;
-}
-}
+
 .single-top-white-bg {
   position: relative;
   padding-bottom: 50px;

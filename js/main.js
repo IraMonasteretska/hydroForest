@@ -191,3 +191,22 @@ if (document.querySelector(".cat-prod__sort")) {
   });
 }
 // end sort hide/visible
+
+
+// start single-product video function 
+if (document.querySelector(".product-top__for")) {
+  let videoFor = document.querySelectorAll(".product-top__for-video");
+  let iconPlayVideoFor = document.querySelectorAll(
+    ".product-top__icon-play"
+  );
+  for (let i = 0; i < videoFor.length; i++) {
+    iconPlayVideoFor[i].addEventListener("click", () => {
+      videoFor[i].play();
+      videoFor[i].setAttribute("controls", "controls");
+      videoFor[i].parentElement
+        .querySelector(".product-top__icon-play")
+        .classList.add("hidden");
+    });
+  }
+}
+// end single-product  video function
