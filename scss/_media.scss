@@ -1,3 +1,15 @@
+@media (max-width: 1500px) {
+  .contacts {
+    &__item-items-wrap {
+      height: auto !important;
+    }
+
+    &__item-items {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 1330px) {
   .card-product {
     padding: 15px;
@@ -248,8 +260,9 @@
     }
   }
 
-
-  .product-top, .product-info, .product-attr{
+  .product-top,
+  .product-info,
+  .product-attr {
     padding: 20px;
   }
 
@@ -299,6 +312,76 @@
 
     &__attr-cont {
       margin-top: 50px;
+    }
+  }
+
+  #map{
+    height: 400px;
+  }
+  
+
+  .contacts {
+    margin-top: 260px;
+    &__left,
+    &__right {
+      width: calc(100% - 50px);
+      padding: 25px 25px;
+    }
+
+    &__left-title {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    &__item-items {
+      margin-top: 20px;
+    }
+
+    &__item,
+    &__item-mail {
+      margin-top: 6px;
+    }
+
+    &__item-mail,
+    &__item-value,
+    &__item-name {
+      line-height: 150%;
+    }
+
+    &__right-title {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    &__right-text {
+      margin-top: 20px;
+    }
+
+    &__form {
+      margin-top: 10px;
+    }
+
+    &__form-df {
+      margin-top: 0px;
+      display: block;
+    }
+
+    &__form-input {
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    &__form-textarea {
+      margin-top: 30px;
+      height: 210px;
+    }
+
+    &__form-policy {
+      margin-top: 20px;
+    }
+
+    &__form-submit {
+      margin: 40px auto 0 auto;
     }
   }
 }
@@ -1244,10 +1327,11 @@
     display: none;
   }
 
-  .product-top, .product-info, .product-attr{
+  .product-top,
+  .product-info,
+  .product-attr {
     padding: 20px 10px;
   }
-
 
   .product-top {
     display: block;
@@ -1265,6 +1349,17 @@
     }
     &__attr-cont {
       margin-top: 30px;
+    }
+  }
+
+  .contacts {
+    max-width: 600px;
+    flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    &__left,
+    &__right {
+      padding: 35px 25px;
     }
   }
 }
@@ -1640,20 +1735,20 @@
   }
 
   .breadcrumbs {
-  overflow: hidden; 
-  width: 80%;
-  display: inline-block ;
-  margin-left: 0; 
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    width: 80%;
+    display: inline-block;
+    margin-left: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     &__cat {
       font-size: 15px;
     }
     &__home {
       svg {
-        width: 15px;
-        height: 15px;
+        width: 19px;
+        height: 19px;
       }
       svg path {
         transition: all 0.5s;
@@ -1661,11 +1756,10 @@
       &:hover svg path {
         fill: #e44747;
       }
-
     }
 
     &__separator {
-      display: inline-block ;
+      display: inline-block;
       margin-left: 7px;
       margin-right: 7px;
     }
@@ -1674,21 +1768,23 @@
       font-size: 15px;
       color: #b1bdc9;
     }
-
-    
-     
-   
   }
 
-  .tabs-sliders-product{
+  .tabs-sliders-product {
     margin-top: 30px;
     margin-bottom: 30px;
     .tabs-sliders__slider {
-  margin-top: 40px;
+      margin-top: 40px;
     }
   }
 
   .category-bunner-title {
+    margin-top: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+
+  .slider-bunner-cat{
     margin-top: 20px;
   }
 
@@ -1832,6 +1928,50 @@
       margin-top: 20px;
     }
   }
+
+  .contacts {
+    &__left,
+    &__right {
+      width: calc(100% - 30px);
+      padding: 35px 15px;
+    }
+
+    &__left-title {
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    &__item-items {
+      margin-top: 10px;
+    }
+
+    &__right-title {
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    &__right-text {
+      line-height: 24px;
+      margin-top: 20px;
+    }
+
+    &__form-input {
+      margin-top: 20px;
+    }
+
+    &__form-textarea {
+      margin-top: 25px;
+      height: 150px;
+    }
+
+    &__form-policy {
+      margin-top: 15px;
+    }
+
+    &__form-submit {
+      margin: 20px auto 0 auto;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -1845,7 +1985,7 @@
     margin-bottom: 15px;
   }
 
-  .product-info{
+  .product-info {
     margin-top: 40px;
   }
 
@@ -1854,7 +1994,7 @@
     &__cont {
       margin-top: 35px;
     }
-  
+
     &__item {
       margin-top: 20px;
       display: block;

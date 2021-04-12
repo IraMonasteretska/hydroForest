@@ -192,13 +192,10 @@ if (document.querySelector(".cat-prod__sort")) {
 }
 // end sort hide/visible
 
-
-// start single-product video function 
+// start single-product video function
 if (document.querySelector(".product-top__for")) {
   let videoFor = document.querySelectorAll(".product-top__for-video");
-  let iconPlayVideoFor = document.querySelectorAll(
-    ".product-top__icon-play"
-  );
+  let iconPlayVideoFor = document.querySelectorAll(".product-top__icon-play");
   for (let i = 0; i < videoFor.length; i++) {
     iconPlayVideoFor[i].addEventListener("click", () => {
       videoFor[i].play();
@@ -210,3 +207,20 @@ if (document.querySelector(".product-top__for")) {
   }
 }
 // end single-product  video function
+
+// start contact page height
+if (document.querySelector(".contacts__item-items-wrap")) {
+  let contactHeight = document.querySelector(".contacts__item-items-wrap");
+  contactHeight.style.height = contactHeight.scrollHeight / 1.6 + 200 + "px";
+}
+
+// end contact page height
+
+// start auto open accordion
+if (document.querySelector(".cat-prod")) {
+  let prodAcc = document.querySelectorAll(".products__accordion-btn");
+  for (let i of prodAcc) {
+    i.click();
+  }
+}
+// end auto open accordion

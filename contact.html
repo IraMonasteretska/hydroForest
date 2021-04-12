@@ -114,14 +114,14 @@
                   transform="rotate(-45 7.55379 4.09412)" stroke="#E44747" />
               </svg>
             </span>
-            <span class="header__menu-item-name ">
+            <span class="header__menu-item-name">
               PRODUCTS
             </span>
           </a>
-          <a href="about-us.html" class="header__menu-item header__menu-item--curently">ABOUT US</a>
+          <a href="about-us.html" class="header__menu-item">ABOUT US</a>
           <a href="financing.html" class="header__menu-item">FINANCING</a>
           <a href="used.html" class="header__menu-item">USED</a>
-          <a href="contact.html" class="header__menu-item">CONTACT</a>
+          <a href="contact.html" class="header__menu-item header__menu-item--curently">CONTACT</a>
         </div>
         <div class="header__burger-cont">
           <div class="header__burger-menu">
@@ -265,230 +265,303 @@
       </button>
     </div>
   </div>
+  <div class="contacts-bg">
+    <div class="map">
+      <div id="map">
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuqtG8XhmKQPGoYpFi9dqZmhZTDWGCxE0&amp;callback=initMap">
+          </script>
+        <script>
+          // ////////////  map init /////////
 
-  <nav class="breadcrumbs container breadcrumbs__about">
-    <a href="index.html" class="breadcrumbs__home">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0)">
-          <path
-            d="M16.4816 8.27283V17.5905H12.9635V13.5607C12.9635 13.2074 12.6771 12.921 12.3239 12.921H7.82492C7.4716 12.921 7.18527 13.2074 7.18527 13.5607V17.5905H3.68848V8.27283H2.40918V18.2302C2.40918 18.5835 2.69555 18.8698 3.04883 18.8698H7.82496C8.17828 18.8698 8.46461 18.5835 8.46461 18.2302V14.2004H11.6842V18.2302C11.6842 18.5835 11.9706 18.8699 12.3239 18.8699H17.1213C17.4746 18.8699 17.761 18.5835 17.761 18.2302V8.27283H16.4816Z"
-            fill="#222222" />
-          <path
-            d="M19.7975 9.9808L10.5224 1.30279C10.2782 1.074 9.89871 1.07252 9.65246 1.29873L0.206833 9.97677C-0.0532847 10.2158 -0.070355 10.6203 0.168668 10.8804C0.294684 11.0179 0.46695 11.0874 0.639879 11.0874C0.79445 11.0874 0.949684 11.0316 1.0725 10.9188L10.0814 2.64201L18.9234 10.9149C19.1819 11.1565 19.5861 11.1427 19.8275 10.8849C20.0687 10.6269 20.0554 10.2222 19.7975 9.9808Z"
-            fill="#222222" />
-        </g>
-        <defs>
-          <clipPath id="clip0">
-            <rect width="20" height="20" fill="white" />
-          </clipPath>
-        </defs>
-      </svg>
-    </a>
-    <span class="breadcrumbs__separator">
-      <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="6" height="6" rx="2" fill="#B1BDC9" />
-      </svg>
-    </span>
-    <span class="breadcrumbs__this">
-      About us
-    </span>
-  </nav>
+          function initMap() {
+            setTimeout(function () {
+              var element = document.getElementById('map');
 
-  <div class="welcome-black-bg welcome-black-about">
-    <section class="welcome container welcome-about">
-      <div class="nav-title">
-        <span class="nav-title__line"></span>
-        <p class="nav-title__text nav-title__text-lower">Hydroforest.fi</p>
+              var stylemap = [
+                {
+                  "featureType": "administrative",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    {
+                      "color": "#444444"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "landscape",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "color": "#f2f2f2"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "visibility": "off"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "saturation": -100
+                    },
+                    {
+                      "lightness": 45
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.highway",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "visibility": "simplified"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.highway",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                    {
+                      "color": "#ffffff"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "road.arterial",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                    {
+                      "visibility": "off"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "transit",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "visibility": "off"
+                    }
+                  ]
+                },
+                {
+                  "featureType": "water",
+                  "elementType": "all",
+                  "stylers": [
+                    {
+                      "color": "#dde6e8"
+                    },
+                    {
+                      "visibility": "on"
+                    }
+                  ]
+                }
+              ]
+
+
+              var options = {
+                zoom: 13,
+                styles: stylemap,
+                disableDefaultUI: true,
+                center: {
+                  lat: 60.00709621992757,
+                  lng: 23.539583887654967
+                }
+
+              };
+              var myMap = new google.maps.Map(element, options);
+
+              var markers = [{
+                coordinates: {
+                  lat: 60.00709621992757,
+                  lng: 23.539583887654967
+                },
+                image: "img/icons/marker-map.png",
+              }];
+
+              function addMarker(properties) {
+                var marker = new google.maps.Marker({
+                  position: properties.coordinates,
+                  map: myMap,
+                  icon: properties.image,
+                  animation: google.maps.Animation.BOUNCE,
+                });
+
+
+              }
+              for (var i = 0; i < markers.length; i++) {
+                addMarker(markers[i]);
+              }
+
+            }, 500)
+
+
+
+
+          }
+        </script>
       </div>
+    </div>
 
-      <h3 class="welcome__title  st-title">Hydroforest Ab Oy</h3>
-      <div class="welcome__text-df ">
-        <span class="st-letter"></span>
-        <p class="welcome__text fl-text"> Hydroforest Ab is a company that services everything we
-          sell and can give advice if it pays to repair a machine or buy a new one.
-        </p>
-      </div>
+    <nav class="breadcrumbs container breadcrumbs__contact">
+      <a href="index.html" class="breadcrumbs__home">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path
+              d="M16.4816 8.27283V17.5905H12.9635V13.5607C12.9635 13.2074 12.6771 12.921 12.3239 12.921H7.82492C7.4716 12.921 7.18527 13.2074 7.18527 13.5607V17.5905H3.68848V8.27283H2.40918V18.2302C2.40918 18.5835 2.69555 18.8698 3.04883 18.8698H7.82496C8.17828 18.8698 8.46461 18.5835 8.46461 18.2302V14.2004H11.6842V18.2302C11.6842 18.5835 11.9706 18.8699 12.3239 18.8699H17.1213C17.4746 18.8699 17.761 18.5835 17.761 18.2302V8.27283H16.4816Z"
+              fill="#222222" />
+            <path
+              d="M19.7975 9.9808L10.5224 1.30279C10.2782 1.074 9.89871 1.07252 9.65246 1.29873L0.206833 9.97677C-0.0532847 10.2158 -0.070355 10.6203 0.168668 10.8804C0.294684 11.0179 0.46695 11.0874 0.639879 11.0874C0.79445 11.0874 0.949684 11.0316 1.0725 10.9188L10.0814 2.64201L18.9234 10.9149C19.1819 11.1565 19.5861 11.1427 19.8275 10.8849C20.0687 10.6269 20.0554 10.2222 19.7975 9.9808Z"
+              fill="#222222" />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="20" height="20" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
 
-      <div class="welcome__df">
-        <div class="welcome__left">
-          <div class="welcome__slider about__first-slider">
-            <img src="img/home/welcome__slider.jpg" class="welcome__slider-item about__first-slider-item" alt="img">
-            <img src="img/home/welcome__slider.jpg" class="welcome__slider-item about__first-slider-item" alt="img">
-            <img src="img/home/welcome__slider.jpg" class="welcome__slider-item about__first-slider-item" alt="img">
-            <img src="img/home/welcome__slider.jpg" class="welcome__slider-item about__first-slider-item" alt="img">
-          </div>
-          <div class="welcome__slider-count"><span class="welcome__slider-current-slide about__first-slider-current-slide">1</span><span
-              class="welcome__slider-separator">/</span><span class="welcome__slider-all-slide about__first-slider-all-slide"></span></div>
-        </div>
-        <div class="welcome__right">
-          <p class="welcome__right-text ">We sell i.a. Polaris and Honda 4-wheelers, Husqvarna lawn mowers, clearing
-            saws,
-            trimmers and chainsaws with accessories, Honda lawnmowers, robotic mowers, clearing saws, trimmers, water
-            pumps, generators, 125-cc motorcycles and moped scooters. </p>
+      <span class="breadcrumbs__separator">
+        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="6" height="6" rx="2" fill="#222" />
+        </svg>
+      </span>
+      <span class="breadcrumbs__this">
+        Contact
+      </span>
+    </nav>
 
-          <p class="welcome__right-text--bold st-bold">On the hydraulics side, we manufacture hydraulic hoses and sell
-            associated products there.</p>
-          <a href="#" class="welcome__right-link welcome__right-link-about">More about us</a>
-        </div>
-      </div>
-    </section>
-  </div>
+    <div class="container">
+      <div class="contacts">
+        <div class="contacts__left">
+          <h3 class="contacts__left-title">
+            Contacts
+          </h3>
 
-  <div class="gray--bg about-gray-bg">
-    <section class="about container">
-      <div class="nav-title">
-        <span class="nav-title__line"></span>
-        <p class="nav-title__text nav-title__text-lower">Subtitle number two</p>
-      </div>
-      <h3 class="about__title  st-title">We have assembled the best team</h3>
-      <div class="about__top-df">
-        <div class="welcome__text-df about__fl">
-          <span class="st-letter"></span>
-          <p class="welcome__text fl-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
-          </p>
-        </div>
-
-        <p class="about__top--text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
-        </p>
-      </div>
-      <div class="about__top-df">
-        <p class="about__top--text about__top--text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-
-        <p class="about__top--text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-      </div>
-
-      <div class="about__bot">
-        <div class="welcome__df welcome__df-about">
-          <div class="welcome__right welcome__right-about">
-            <p class="welcome__right-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  
-            <p class="welcome__right-text--bold ">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-            <a href="#" class="welcome__right-link">Contact us</a>
-          </div>
-          <div class="welcome__left">
-            <div class="welcome__slider about__two-slider">
-              <img src="img/about/slider-img.png" class="welcome__slider-item about__two-slider-item" alt="img">
-              <img src="img/about/slider-img.png" class="welcome__slider-item about__two-slider-item" alt="img">
-              <img src="img/about/slider-img.png" class="welcome__slider-item about__two-slider-item" alt="img">
-              <img src="img/about/slider-img.png" class="welcome__slider-item about__two-slider-item" alt="img">
+          <div class="contacts__item-items-wrap">
+            <div class="contacts__item-items">
+              <h5 class="contacts__item-title">
+                Entrepreneurs
+              </h5>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Klaus sundblom</span>
+                <a href="#" class="contacts__item-value"> </a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Telephone</span>
+                <a href="#" class="contacts__item-value">019-2416999</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Mobile phone:</span>
+                <a href="#" class="contacts__item-value"> 0400-477890</a>
+              </div>
+              <a href="#" class="contacts__item-mail">klaus.sundblom@hydroforest.fi</a>
             </div>
-            <div class="welcome__slider-count "><span class="welcome__slider-current-slide about__two-slider-current-slide">1</span><span
-                class="welcome__slider-separator ">/</span><span class="welcome__slider-all-slide about__two-slider-all-slide"></span></div>
+            <div class="contacts__item-items">
+              <h5 class="contacts__item-title">
+                Work Reception and parts
+              </h5>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Klaus sundblom</span>
+                <a href="#" class="contacts__item-value"> </a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Telephone</span>
+                <a href="#" class="contacts__item-value">019-2416999</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Mobile phone:</span>
+                <a href="#" class="contacts__item-value"> 0400-477890</a>
+              </div>
+              <a href="#" class="contacts__item-mail">klaus.sundblom@hydroforest.fi</a>
+            </div>
+            <div class="contacts__item-items">
+              <h5 class="contacts__item-title">
+                Hydroforest Ab
+              </h5>
+              <div class="contacts__item">
+                <span class="contacts__item-name">FO number 1613276-1</span>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Västanbygränd 4</span>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">10600 Ekenäs</span>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name"><br></span>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Telephone</span>
+                <a href="#" class="contacts__item-value">019-2416999</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Mobile phone:</span>
+                <a href="#" class="contacts__item-value"> 0400-477890</a>
+              </div>
+            </div>
+            <div class="contacts__item-items">
+              <h5 class="contacts__item-title">
+                Entrepreneurs
+              </h5>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Klaus sundblom</span>
+                <a href="#" class="contacts__item-value"> </a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Telephone</span>
+                <a href="#" class="contacts__item-value">019-2416999</a>
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__item-name">Mobile phone:</span>
+                <a href="#" class="contacts__item-value"> 0400-477890</a>
+              </div>
+              <a href="#" class="contacts__item-mail">klaus.sundblom@hydroforest.fi</a>
+            </div>
           </div>
-        
+        </div>
+        <div class="contacts__right">
+          <h3 class="contacts__right-title"> Send a message</h3>
+          <p class="contacts__right-text">You can send us a message. To do this, enter your contact information and
+            message.</p>
+
+          <form class="contacts__form">
+            <div class="contacts__form-df">
+              <input type="text" placeholder="Your name *" class="contacts__form-input">
+              <input type="text" placeholder="Your lastname" class="contacts__form-input">
+            </div>
+            <div class="contacts__form-df">
+              <input type="text" placeholder="Email *" class="contacts__form-input">
+              <input type="text" placeholder="Phone number" class="contacts__form-input">
+            </div>
+            <textarea placeholder="Message to us" class="contacts__form-textarea"></textarea>
+            <p class="contacts__form-policy">
+              By clicking Send a message, you agree to our
+              <a href="#" class="contacts__form-policy--link">
+                Terms
+              </a>
+              and that you have read our
+              <a href="#" class="contacts__form-policy--link">
+                Data Use Policy.
+              </a>
+            </p>
+            <input type="submit" value="SENG A MESSAGE" class="contacts__form-submit">
+          </form>
         </div>
       </div>
-
-    </section>
-
+    </div>
   </div>
-
-  <section class="our-brand container">
-    <div class="nav-title">
-      <span class="nav-title__line"></span>
-      <p class="nav-title__text">We work with the best</p>
-    </div>
-
-    <h3 class="our-brand__title  st-title">Our brands</h3>
-    <div class="our-brand__brands">
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-1.png" class="our-brand__brand" alt="brand">
-      </div>
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-2.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-3.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-4.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-5.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-6.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-7.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-8.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-9.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-10.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-11.png" class="our-brand__brand" alt="brand">
-      </div>
-
-      <div class="our-brand__brand-wrap">
-        <img src="img/home/brand/brand-12.png" class="our-brand__brand" alt="brand">
-      </div>
-    </div>
-  </section>
-
-  <section class="adventag container">
-    <div class="nav-title">
-      <span class="nav-title__line"></span>
-      <p class="nav-title__text">We work with the best</p>
-    </div>
-
-    <h3 class="adventag__main-title  st-title">Advantages</h3>
-
-    <div class="adventag__items">
-      <div class="adventag__item">
-        <div class="adventag__icon-wrap">
-          <img src="img/icons/adventag-left.svg" class="adventag__icon" alt="icon">
-        </div>
-        <h3 class="adventag__title">SERVICE AND SPARE PARTS SERVICE</h3>
-        <p class="adventag__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-      </div>
-      </p>
-      <div class="adventag__item adventag__item--center">
-        <div class="adventag__icon-wrap">
-          <img src="img/icons/adventag-center.svg" class="adventag__icon" alt="icon">
-        </div>
-        <h3 class="adventag__title">PRODUCTS ASSEMBLED AND SERVICED</h3>
-        <p class="adventag__text">Ut enim ad minim veniam, quis nostrud exercitation Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-      </p>
-      <div class="adventag__item">
-        <div class="adventag__icon-wrap">
-          <img src="img/icons/adventag-right.svg" class="adventag__icon" alt="icon">
-        </div>
-        <h3 class="adventag__title">extensive experience in the field</h3>
-        <p class="adventag__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-      </div>
-      </p>
-
-    </div>
-  </section>
 
   <div class="footer-black-bg">
     <footer class="footer container">
@@ -541,7 +614,7 @@
             </a>
           </li>
           <li class="footer__menu-item">
-            <a href="" class="footer__link header__menu-item--curently">
+            <a href="" class="footer__link">
               ABOUT US
             </a>
           </li>
@@ -556,7 +629,7 @@
             </a>
           </li>
           <li class="footer__menu-item">
-            <a href="" class="footer__link">
+            <a href="" class="footer__link active">
               CONTACT
             </a>
           </li>
@@ -570,9 +643,9 @@
     <div class="container nav__wrapper">
       <div class="nav__main">
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             CUTTING GRASS
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Robotic lawnmowers
@@ -596,9 +669,9 @@
 
         </div>
         <div class="nav__list">
-          <a href="#"class="nav__title">
+          <h3 class="nav__title">
             BATTERY PRODUCTS
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Battery products
@@ -606,9 +679,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             WINTER TOOLS
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Snow thrower
@@ -616,9 +689,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             CLEANING
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Pressure washers
@@ -629,9 +702,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             LAWN CARE
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Lawn airers
@@ -639,9 +712,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             CUTTING
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Chainsaws
@@ -655,9 +728,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             CUTTING GRASS
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               LAWN CARE
@@ -668,9 +741,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             EQUIPMENT AND ACCESSORIES
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Personal protective equipment
@@ -691,9 +764,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             TRIMMING AND GRUBBING-UP
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Hedge trimmer
@@ -707,9 +780,9 @@
           </ul>
         </div>
         <div class="nav__list">
-          <a href="#" class="nav__title">
+          <h3 class="nav__title">
             EARTHMAKING AND TIDYING
-          </a>
+          </h3>
           <ul class="nav__items">
             <a href="#" class="nav__item">
               Fans

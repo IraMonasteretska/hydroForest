@@ -149,6 +149,7 @@ if (document.querySelector(".tabs-sliders")) {
       slidesToScroll: mediaSlidesToShow,
       dots: false,
       arrows: true,
+      infinite: false,
       prevArrow: '<div class="slick-prev slick-arrow"></div>',
       nextArrow: '<div class="slick-next slick-arrow"></div>',
     });
