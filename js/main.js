@@ -88,8 +88,8 @@ if (document.querySelector(".fl-text")) {
   const FlText = document.querySelectorAll(".fl-text");
   let FlLetter = document.querySelectorAll(".st-letter");
   for (let i = 0; i < FlText.length; i++) {
-    FlLetter[i].textContent = FlText[i].textContent.trim().split("")[0];
-    let arrFlText = FlText[i].textContent.trim().split("");
+    FlLetter[i].innerHTML = FlText[i].innerHTML.trim().split("")[0];
+    let arrFlText = FlText[i].innerHTML.trim().split("");
     let text = "";
     let itemCount = 0;
     for (let i of arrFlText) {
@@ -99,7 +99,7 @@ if (document.querySelector(".fl-text")) {
       }
       text += String(i);
     }
-    FlText[i].textContent = text;
+    FlText[i].innerHTML = text;
   }
 }
 // end first letter text js

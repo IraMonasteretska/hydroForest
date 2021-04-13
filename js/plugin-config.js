@@ -366,14 +366,14 @@ if (document.querySelector(".product-top__for")) {
         breakpoint: 766,
         settings: {
           slidesToShow: 2,
-          centerMode: true,
+          // centerMode: true,
         },
       },
       {
         breakpoint: 420,
         settings: {
-          slidesToShow: 1,
-          centerMode: true,
+          slidesToShow: 2,
+          // centerMode: true,
         },
       },
     ],
