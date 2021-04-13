@@ -321,7 +321,10 @@ if (document.querySelector(".single-bot__slider")) {
 
 // start single-product slider
 if (document.querySelector(".product-top__for")) {
+  let navItems = document.querySelectorAll(".product-top__nav-item");
+  let forItems = document.querySelectorAll(".product-top__for-item");
   let video = document.querySelectorAll(".product-top__for-video");
+
   $(".product-top__for")
     .slick({
       slidesToShow: 1,
@@ -334,7 +337,23 @@ if (document.querySelector(".product-top__for")) {
       for (let i = 0; i < video.length; i++) {
         video[i].pause();
       }
+    })
+    .on("afterChange", () => {
+      for (let i = 0; i < forItems.length; i++) {
+        forItems[i].classList.remove("active-label");
+        navItems[i].classList.remove("active-label");
+        if (forItems[i].classList.contains("slick-current")) {
+          navItems[i].classList.add("active-label");
+        }
+      }
     });
+
+  for (let i = 0; i < forItems.length; i++) {
+    if (forItems[i].classList.contains("slick-current")) {
+      navItems[i].classList.add("active-label");
+    }
+  }
+
   $(".product-top__nav").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -347,9 +366,17 @@ if (document.querySelector(".product-top__for")) {
         breakpoint: 766,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
         },
       },
-    ]
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+    ],
   });
 }
 // end single-product slider

@@ -61,11 +61,13 @@ z-index: -1;
       flex-direction: column;
       flex-wrap: wrap;
       width: 100%;
+      margin-top: -37px;
   }
 
   &__item-items {
     margin-top: 40px;
 width: 45%;
+
   }
 
   &__item-title {
@@ -111,7 +113,7 @@ width: 45%;
       position: absolute;
       width: 15px;
       height: 12px;
-      top: 50%;
+      top: 53%;
       transform: translateY(-50%);
       left: 0;
       background: url(../img/icons/mail.svg);

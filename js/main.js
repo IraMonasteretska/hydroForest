@@ -5,6 +5,7 @@ let nav = document.querySelector(".nav");
 let navHeight = document.querySelector(".nav__main");
 let menuItemProd = document.querySelector(".header__menu-item-prod");
 let mobileMenu = document.querySelector(".mobile-menu");
+let navClose = document.querySelector(".nav__close");
 // end common variables
 
 // start height nav
@@ -54,6 +55,14 @@ if (document.querySelector(".header__burger-cont")) {
   });
 }
 // end burger menu
+
+// start close nav menu
+if (document.querySelector(".nav__close")) {
+  navClose.addEventListener("click", () => {
+    nav.classList.remove("visible");
+  });
+}
+// end close nav menu
 
 //  start move nav menu
 menuItemProd.addEventListener("mouseenter", () => {
@@ -224,3 +233,43 @@ if (document.querySelector(".cat-prod")) {
   }
 }
 // end auto open accordion
+
+
+// single product input counter
+if (document.querySelector(".product-top__number-btn")) {
+  let numberBtn = document.querySelectorAll(".product-top__number-btn");
+  let numberBtnPlus = document.querySelector(".product-top__number-btn--plus");
+  let numberBtnMinus = document.querySelector(
+    ".product-top__number-btn--minus"
+  );
+  let numberInput = document.querySelector(".product-top__number");
+  numberInput.addEventListener("mouseenter", () => {
+    for (let i of numberBtn) {
+      i.classList.add("active");
+    }
+  });
+
+  numberInput.addEventListener("mouseleave", () => {
+    for (let i of numberBtn) {
+      i.classList.remove("active");
+      i.addEventListener("mouseenter", () => {
+        for (let j of numberBtn) {
+          j.classList.add("active");
+        }
+      });
+    }
+  });
+
+  numberBtnPlus.addEventListener("click", () => {
+    numberInput.value++;
+  });
+
+  numberBtnMinus.addEventListener("click", () => {
+    if (numberInput.value == 1) {
+      return;
+    }
+    numberInput.value--;
+  });
+}
+// end product input counter
+

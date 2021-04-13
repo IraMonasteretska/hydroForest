@@ -103,7 +103,7 @@
     <div class="header__tr">
       <div class="header__tr-container">
         <div class="header__menu">
-          <a href="index.html" class="header__menu-item header__menu-item--curently">HOME</a>
+          <a href="index.html" class="header__menu-item ">HOME</a>
           <a href="products.html" class="header__menu-item header__menu-item-prod">
             <span class="header__menu-icon-prod">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@
                   transform="rotate(-45 7.55379 4.09412)" stroke="#E44747" />
               </svg>
             </span>
-            <span class="header__menu-item-name">
+            <span class="header__menu-item-name header__menu-item--curently">
               PRODUCTS
             </span>
           </a>
@@ -170,7 +170,7 @@
 
   <div class="mobile-menu container hidden">
     <div class="header__menu">
-      <a href="#" class="header__menu-item header__menu-item--curently">HOME</a>
+      <a href="#" class="header__menu-item ">HOME</a>
       <a href="#" class="header__menu-item header__menu-item-prod">
         <span class="header__menu-icon-prod">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@
               transform="rotate(-45 7.55379 4.09412)" stroke="#E44747" />
           </svg>
         </span>
-        <span class="header__menu-item-name">
+        <span class="header__menu-item-name header__menu-item--curently">
           PRODUCTS
         </span>
       </a>
@@ -265,6 +265,7 @@
       </button>
     </div>
   </div>
+
   <div class="gray--bg-main-first gray--bg">
     <nav class="breadcrumbs container ">
       <a href="index.html" class="breadcrumbs__home">
@@ -360,7 +361,11 @@
 
           <div class="product-top__qty-df">
             <p class="product-top__amount-text"> Amount </p>
+            <div class="product-top__number-wrap">
+              <span class="product-top__number-btn product-top__number-btn--minus"></span>
             <input type="number" class="product-top__number" value="1">
+            <span class="product-top__number-btn product-top__number-btn--plus"></span>
+            </div>
             <button class="product-top__buy">
               <img src="img/icons/buy-icon.svg" class="card-product__buy-icon" alt="buy-product">
               <span class="card-product__buy-text">Buy</span>
@@ -813,7 +818,7 @@
         </div>
         <ul class="footer__menu">
           <li class="footer__menu-item">
-            <a href="" class="footer__link active">
+            <a href="" class="footer__link ">
               HOME
             </a>
           </li>
@@ -828,7 +833,7 @@
                     transform="rotate(-45 7.55379 4.09412)" stroke="#E44747" />
                 </svg>
               </span>
-              <span class="footer__menu-item-name">
+              <span class="footer__menu-item-name header__menu-item--curently">
                 PRODUCTS
               </span>
             </a>
